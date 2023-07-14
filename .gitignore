@@ -6,6 +6,19 @@ __pycache__/
 # C extensions
 *.so
 
+.DS_Store
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# satisfy github size req 
+find . -size +100M | cat >> .gitignore
+
+# ignore all __pycache__ folders
+__pycache__/
+
 # Distribution / packaging
 .Python
 build/
