@@ -1,40 +1,32 @@
 ## 🐟 spacefish
 
-Code for: Naïve Information Aggregation in Human Social Learning
-<!-- 
-### 🧐 What is this?
+Data and Model Code for Naïve Information Aggregation in Human Social Learning (link).
 
+### 🧐 What is this?
+This repo includes the raw and preprocessed data for our paper Naïve Information Aggregation in Human Social Learning. The src code includes an example simulation for running the Level-1 and Level-2 learners we used in our paper.
+
+If you have detailed questions about the analysis code, please get in touch! 
 
 ### 📂 Repro structure
 
 ```
-├── src                  
-│   └──  
-│   ├── 
-│   ├── 
-│   ├── 
-│   └── 
+├── src                   
+│   ├── agent.py
+│   ├── environment.py
+│   ├── model.py
+│   ├── simulator.py
+│   ├── utils.py
+│   └── example.ipynb
 ├── data          
-│   ├──      
-│   └── 
+│   ├── exp_1     
+│   ├── exp_2 
+│   └── exp_3     
 ├── analysis
-│   ├── 
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── inferred_observations
+│   ├── inferred_structure
+│   ├── processed_data_and_figures
+│   └── plots.ipynb
 ├── LICENSE              
 ├── requirements.txt      
 └── .gitignore           
 ```
-
-### 📖 Documentation
-<a name="documentation"></a>
-
-#### 🚀 Getting started 
-##### Using miniforge
-1. install miniforge from `https://github.com/conda-forge/miniforge` (eg `Miniforge3-MacOSX-arm64`)
-2. `bash Miniforge3-MacOSX-arm64.sh`
-3. close terminal
-4. `conda create --name spacefish python==3.10`
-5. `conda activate spacefish`
-6. `pip install -r requirements.txt` 
