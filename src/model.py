@@ -8,7 +8,7 @@ from utils import flat
 class Beta():
     
     def __init__(self, prior_a, prior_b, n_choices):
-        """Standard beta-binomial updating model with some custom functionality.
+        """beta-binomial model.
           
           Args:
           
