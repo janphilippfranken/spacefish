@@ -6,7 +6,7 @@ import model
 
 state = model.Beta(prior_a=1, prior_b=1, n_choices=7)
 
-class Agent: # todo: split into two classes?
+class Agent: 
     
     def __init__(self, 
                  agent_id, 
@@ -143,7 +143,7 @@ class Agent: # todo: split into two classes?
     
     def step(self, env, method):
         
-        if self.fixed_obs == []:
+        if self.fixed_obs.shape[0] == 0:
             self.sample = np.random.choice([1, -1, 0], p=self.p)  
         else:
             self.sample = self.fixed_obs[self.t]
@@ -151,7 +151,7 @@ class Agent: # todo: split into two classes?
         self.obs.append(self.sample)
         self.history = env.get_env(self.t, self.id)[1]        
         if method == 'fullpost':
-            self.inferred_obs = {} # todo: perhaps change name, this is obs for method: 'fullPost'
+            self.inferred_obs = {} 
             for i in range(self.history.shape[1]): 
                 communications = self.history[:,i]
                 self.inferred_obs[i] = self.invert_model(communications) 
@@ -171,7 +171,7 @@ class Agent: # todo: split into two classes?
             communication_probs = self.State.softmax(communication_probs, self.emp_tau) 
             self.com_ps.append(communication_probs)
         if method == 'seqfilter':
-            self.inferred_states = {} # todo: perhaps change name, this is obs for method: 'seq filter'
+            self.inferred_states = {}
             for i in range(self.history.shape[1]): 
                 communications = self.history[:,i]
                 self.inferred_states[i] = self.sequential_filter(communications) 
@@ -189,7 +189,7 @@ class Agent: # todo: split into two classes?
             communication_probs = self.State.get_loss(communication_probs)
             communication_probs = self.State.softmax(communication_probs, self.emp_tau) 
             self.com_ps.append(communication_probs)
-        if method == 'recfilter': # update this section
+        if method == 'recfilter':
             self.inferred_states = {}
             communications = env.communications[:self.t,:]
             parents = env.get_env(self.t, self.id)[2]   
