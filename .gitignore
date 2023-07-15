@@ -9,6 +9,8 @@ __pycache__/
 .DS_Store
 *.pyc
 
+**analysis
+
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
