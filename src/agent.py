@@ -64,7 +64,7 @@ class Agent:
             inferred_obs[com_idx] = beta_state.compress_evidence(permutations, post_probs)  
         return inferred_obs
     
-    def recursive_filter(self, coms, selfid, parents):  # this function needs to be replaced / written again before revision
+    def recursive_filter(self, coms, selfid, parents): 
         
         par_states = []        
         curr_par = parents[selfid]
