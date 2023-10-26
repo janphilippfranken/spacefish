@@ -1,6 +1,6 @@
 ## 🐟 spacefish
 
-Data and Model Code for Naïve Information Aggregation in Human Social Learning (link).
+Data and Model Code for Naïve Information Aggregation in Human Social Learning [paper](https://www.sciencedirect.com/science/article/pii/S0010027723002676).
 
 ### 🧐 What is this?
 This repo includes the raw and preprocessed data for our paper Naïve Information Aggregation in Human Social Learning. The src code includes an example simulation for running the Level-1 and Level-2 learners we used in our paper.
